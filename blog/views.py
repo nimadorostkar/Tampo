@@ -45,3 +45,16 @@ def post_detail(request, slug):
         },
     )
 
+
+
+
+
+def tampo(request):
+    a = 'a'
+    return render(request, 'tampo.html', {'a': a})
+
+
+
+
+
+# End
