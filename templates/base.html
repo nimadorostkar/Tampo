@@ -39,6 +39,7 @@
           <li class="nav-item px-2"><a class="nav-link" href="#services"> خدمات ما </a></li>
           <li class="nav-item px-2"><a class="nav-link" href="#findUs"> تماس با ما </a></li>
           <li class="nav-item px-2"><a class="nav-link" href="#"> در مورد ما </a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="{% url 'home' %}"> وبلاگ </a></li>
         </ul>
         <div class="dropdown d-none d-lg-block">
           <button class="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-warning"></i></button>
@@ -47,7 +48,7 @@
               <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
             </form>
           </div>
-        </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> بررسی تخصصی  </a>
+        </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> صفحه محصول </a>
         <form class="d-flex my-3 d-block d-lg-none">
           <input class="form-control me-2 border-200 bg-light" type="search" placeholder="جستجو" aria-label="Search" />
           <button class="btn btn-outline-primary" type="submit">جستجو</button>
@@ -56,7 +57,7 @@
     </div>
   </nav>
 
-  <br><br><br><br>
+  <br><br><br>
 
 
   {% block content %}
