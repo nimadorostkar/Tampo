@@ -1,12 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
+{% load humanize %}
 
 <div class="container" dir="rtl">
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 left  top">
       <div class="card-body">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on|naturaltime }}</p>
         <p class="card-text ">{{ post.content | safe }}</p>
       </div>
     </div>
@@ -16,7 +17,7 @@
       <div class="card-body">
         <!-- comments -->
         {% with comments.count as total_comments %}
-        <h2>{{ total_comments }} comments</h2>
+        <h2> نظرات <small>({{ total_comments }})</small> </h2>
 
         <p>
           {% endwith %} {% for comment in comments %}
@@ -26,7 +27,7 @@
           <p class="font-weight-bold">
             {{ comment.name }}
             <span class=" text-muted font-weight-normal">
-              {{ comment.created_on }}
+              {{ comment.created_on|naturaltime }}
             </span>
           </p>
           {{ comment.body | linebreaks }}
@@ -39,14 +40,14 @@
       <div class="card-body">
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
-          Your comment is awaiting moderation
+          نظر شما در انتظار تایید است
         </div>
         {% else %}
-        <h3>Leave a comment</h3>
+        <h3> نظر بدهید </h3>
         <form method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+          <button type="submit" class="btn btn-primary  btn-lg">ارسال</button>
         </form>
         {% endif %}
       </div>

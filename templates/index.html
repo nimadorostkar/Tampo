@@ -29,10 +29,10 @@
           <h2 class="card-title">{{ post.title }}</h2>
           <p class="card-text text-muted h6"> {{ post.created_on|naturaltime }} | نویسنده: {{ post.author }}  </p>
 
-          <p class="card-text">{{post.content|safe|slice:":300" }}</p>
+          <p class="card-text">{{post.content|safe|slice:":450" }}</p>
 
           <div align="right">
-            <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary"> ادامه مطلب &rarr;</a>
+            <br> <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary"> ادامه مطلب &rarr;</a>
           </div>
 
         </div>
