@@ -1,84 +1,25 @@
+{% extends "base.html" %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+  <section class="py-xxl-10 pb-0" id="home">
+    <div class="bg-holder bg-size" style="background-image:url({% static 'tampo/assets/img/gallery/hero-header-bg.png' %});background-position:top center;background-size:cover;">
+    </div>
+    <!--/.bg-holder-->
 
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <title> Atrotech | دستگاه چاپ تامپو </title>
-
-
-      <!-- ===============================================-->
-      <!--    Favicons-->
-      <!-- ===============================================-->
-      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'tampo/assets/img/favicons/apple-touch-icon.png' %}">
-      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'tampo/assets/img/favicons/favicon-32x32.png' %}">
-      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'tampo/assets/img/favicons/favicon-16x16.png' %}">
-      <link rel="shortcut icon" type="image/x-icon" href="{% static 'tampo/assets/img/favicons/favicon.ico' %}">
-      <link rel="manifest" href="{% static 'tampo/assets/img/favicons/manifest.json' %}">
-      <meta name="msapplication-TileImage" content="{% static 'tampo/assets/img/favicons/mstile-150x150.png' %}">
-      <meta name="theme-color" content="#ffffff">
-
-      <!-- ===============================================-->
-      <!--    Stylesheets-->
-      <!-- ===============================================-->
-      <link href="{% static 'tampo/assets/css/theme.css' %}" rel="stylesheet" />
-
-    </head>
-
-
-    <body>
-
-      <!-- ===============================================-->
-      <!--    Main Content-->
-      <!-- ===============================================-->
-      <main class="main" id="top">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-          <div class="container"><a class="navbar-brand" href="index.html"><img src="{% static 'tampo/assets/img/gallery/logo.png' %}" height="45" alt="logo" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="index.html"> خانه </a></li>
-                <li class="nav-item px-2"><a class="nav-link" href="#services"> خدمات ما </a></li>
-                <li class="nav-item px-2"><a class="nav-link" href="#findUs"> تماس با ما </a></li>
-                <li class="nav-item px-2"><a class="nav-link" href="#"> در مورد ما </a></li>
-              </ul>
-              <div class="dropdown d-none d-lg-block">
-                <button class="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-warning"></i></button>
-                <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
-                  <form>
-                    <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
-                  </form>
-                </div>
-              </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> بررسی تخصصی  </a>
-              <form class="d-flex my-3 d-block d-lg-none">
-                <input class="form-control me-2 border-200 bg-light" type="search" placeholder="جستجو" aria-label="Search" />
-                <button class="btn btn-outline-primary" type="submit">جستجو</button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <section class="py-xxl-10 pb-0" id="home">
-          <div class="bg-holder bg-size" style="background-image:url({% static 'tampo/assets/img/gallery/hero-header-bg.png' %});background-position:top center;background-size:cover;">
-          </div>
-          <!--/.bg-holder-->
-
-          <div class="container" dir="rtl">
-            <div class="row align-items-center">
-              <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="{% static 'tampo/assets/img/illustrations/hero.png' %}" alt="hero-header" /></div>
-              <div class="col-md-75 col-xl-6 col-xxl-5 py-8">
-                <br>
-                <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2"> دستگاه چاپ پد پرینتر (تامپو) </h1>
-                <p class="fs-1 mb-5"> دستگاه چاپ پد (تامپو) یک رنگ رومیزی که بدون نیاز به کمپرسور  <br> و با استفاده از برق می تواند چاپ های تامپو با کیفیت مطلوب را انجام دهد. </p>
-                <a class="btn btn-primary me-2" href="#!" role="button" dir="ltr"> اطلاعات بیشتر <i class="fas fa-arrow-right ms-2"></i></a>
-                <br> <a href="{% url 'home' %}"> <h6>blog</h6> </a>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="container" dir="rtl">
+      <div class="row align-items-center">
+        <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="{% static 'tampo/assets/img/illustrations/hero.png' %}" alt="hero-header" /></div>
+        <div class="col-md-75 col-xl-6 col-xxl-5 py-8">
+          <br>
+          <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2"> دستگاه چاپ پد پرینتر (تامپو) </h1>
+          <p class="fs-1 mb-5"> دستگاه چاپ پد (تامپو) یک رنگ رومیزی که بدون نیاز به کمپرسور  <br> و با استفاده از برق می تواند چاپ های تامپو با کیفیت مطلوب را انجام دهد. </p>
+          <a class="btn btn-primary me-2" href="#!" role="button" dir="ltr"> اطلاعات بیشتر <i class="fas fa-arrow-right ms-2"></i></a>
+          <br> <a href="{% url 'home' %}"> <h6>blog</h6> </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
         <!-- ============================================-->
@@ -377,96 +318,6 @@
           <!-- end of .container-->
 
         </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
 
 
-
-
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="bg-900 pb-0 pt-5">
-
-          <div class="container">
-            <div class="row" align="center" dir="rtl">
-              <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/logo.png" height="51" alt="" /></a>
-                <p class="text-500 my-4"> آتروتک با برخوردارى از نيروى انسانى متخصص و پشتوانه علمى و تجربى، با استفاده از آخرين روش هاى فن آورى و مهندسى موفق به ارائه خدمات گسترده و با كيفيت براى مشتريان گرديده </p>
-              </div>
-              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-                <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> دفترچه راهنما </h5>
-                <a href="#"> <img src="{% static 'tampo/assets/img/gallery/footerimg.png' %}" height="90" alt=""> </a>
-              </div>
-              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> پیوندها </h5>
-                <ul class="list-unstyled mb-md-4 mb-lg-0">
-                  <li class="lh-lg"><a class="text-500" href="#!"> وبلاگ </a></li>
-                  <li class="lh-lg"><a class="text-500" href="#!"> آپارات </a></li>
-                  <li class="lh-lg"><a class="text-500" href="#!"> آتروتک </a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-                <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> خدمات مشتریان </h5>
-                <ul class="list-unstyled mb-md-4 mb-lg-0">
-                  <li class="lh-lg"><a class="text-500" href="#!"> درباره ما </a></li>
-                  <li class="lh-lg"><a class="text-500" href="#!"> تماس با ما </a></li>
-                  <li class="lh-lg"><a class="text-500" href="#!"> دریافت بروزرسانی </a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- end of .container-->
-
-        </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-
-
-
-
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="py-0 bg-1000">
-
-          <div class="container">
-            <div class="row justify-content-md-between justify-content-evenly py-4">
-              <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Atrotech, 2021</p>
-              </div>
-              <div class="col-12 col-sm-8 col-md-6">
-                <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
-                  <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-primary" href="https://Atrotech.ir" target="_blank">Atrotech </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- end of .container-->
-
-        </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-
-
-      </main>
-      <!-- ===============================================-->
-      <!--    End of Main Content-->
-      <!-- ===============================================-->
-
-
-
-
-      <!-- ===============================================-->
-      <!--    JavaScripts-->
-      <!-- ===============================================-->
-      <script src="{% static 'tampo/vendors/@popperjs/popper.min.js' %}"></script>
-      <script src="{% static 'tampo/vendors/bootstrap/bootstrap.min.js' %}"></script>
-      <script src="{% static 'tampo/vendors/is/is.min.js' %}"></script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-      <script src="{% static 'tampo/vendors/fontawesome/all.min.js' %}"></script>
-      <script src="{% static 'tampo/assets/js/theme.js' %}"></script>
-
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    </body>
-
-</html>
+{%endblock%}
