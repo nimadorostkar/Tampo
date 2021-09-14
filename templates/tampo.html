@@ -1,44 +1,472 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en-US" dir="ltr">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title> Atrotech | دستگاه چاپ تامپو </title>
 
 
-<head>
-  <title>Django Central</title>
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <!-- ===============================================-->
+      <!--    Favicons-->
+      <!-- ===============================================-->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+      <link rel="manifest" href="assets/img/favicons/manifest.json">
+      <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+      <meta name="theme-color" content="#ffffff">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <meta name="google" content="notranslate" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-</head>
+      <!-- ===============================================-->
+      <!--    Stylesheets-->
+      <!-- ===============================================-->
+      <link href="assets/css/theme.css" rel="stylesheet" />
 
-<body>
-
-
-
-
-  <h1> gggg gggg</h1>
-  <hr>
-  <a href="{% url 'home' %}"> blog </a>
+    </head>
 
 
+    <body>
+
+      <!-- ===============================================-->
+      <!--    Main Content-->
+      <!-- ===============================================-->
+      <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+          <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" height="45" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="index.html"> خانه </a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="#services"> خدمات ما </a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="#findUs"> تماس با ما </a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="#"> در مورد ما </a></li>
+              </ul>
+              <div class="dropdown d-none d-lg-block">
+                <button class="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-warning"></i></button>
+                <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
+                  <form>
+                    <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
+                  </form>
+                </div>
+              </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> بررسی تخصصی  </a>
+              <form class="d-flex my-3 d-block d-lg-none">
+                <input class="form-control me-2 border-200 bg-light" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <section class="py-xxl-10 pb-0" id="home">
+          <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+          </div>
+          <!--/.bg-holder-->
+
+          <div class="container" dir="rtl">
+            <div class="row align-items-center">
+              <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/illustrations/hero.png" alt="hero-header" /></div>
+              <div class="col-md-75 col-xl-6 col-xxl-5 py-8">
+                <br>
+                <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2"> دستگاه چاپ پد پرینتر (تامپو) </h1>
+                <p class="fs-1 mb-5"> دستگاه چاپ پد (تامپو) یک رنگ رومیزی که بدون نیاز به کمپرسور  <br> و با استفاده از برق می تواند چاپ های تامپو با کیفیت مطلوب را انجام دهد. </p>
+                <a class="btn btn-primary me-2" href="#!" role="button" dir="ltr"> اطلاعات بیشتر <i class="fas fa-arrow-right ms-2"></i></a>
+                <br> <a href="{% url 'home' %}"> blog </a> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-7" id="services" container-xl="container-xl">
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-5 text-center mb-3">
+                <h5 class="text-danger">SERVICES</h5>
+                <h2> خدمات ما برای مشتریان </h2>
+              </div>
+            </div>
+            <div class="row h-100 justify-content-center">
+              <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+                <div class="card h-100 px-lg-5 card-span">
+                  <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
+                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/competition.png" alt="..." />
+                      <h5 class="my-4"> مزایای رقابتی </h5>
+                    </div>
+                    <p> تمایز و برتری ما نسبت به سایر دستگاه های مشابه در تمام الکترونیک بودن ، سرعت بالا و قابل تنظیم ، صدای بسیار کم، مصرف بهینه و همچنین رابط کاربری آسان آن است که همه این ها در کنار قیمت بسیار پایین محقق شده  </p>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> سیستم شمارنده تعداد ضرب </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> دارای حالت دستی و اتومات </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> بدنه تمام آلومینیومی </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> قیمت پایین </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+                <div class="card h-100 px-lg-5 card-span">
+                  <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
+                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/medal.png" alt="..." />
+                      <h5 class="my-4"> کیفیت بالا </h5>
+                    </div>
+                    <p> این دستگاه جزو دستگاه های کم مصرف و با بازدهی بالا و با هزینه نگهداری بسیار پایین محسوب میشود و با دارا بودن رابط کاربری بسیار ساده و کاربردی و ساخت با کیفیت ، کار را برای اپراتور بسیار راحت میکند و در نهايت باعث افزایش بهره وری میشود. </p>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> دارای پدال و پنل کنترل پیشرفته </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> دستگاه تمام الکترونیک و اتوماتیک  </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> سرعت و بازدهی بالا </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+                <div class="card h-100 px-lg-5 card-span">
+                  <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
+                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/service.png" alt="..." />
+                      <h5 class="my-4"> پشتیبانی مناسب </h5>
+                    </div>
+                    <p>  هدف ما جلب رضایت شماست، رضایت مشتری یعنی باوری که مشتری به قابل اعتماد بودن ما دارد، بنابراین ما تلاش میکنیم تا چیزی که در قبال آن مسئولیت داریم را با ارزشی که دارد حفظ کنیم. </p>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> پشتیبانی ۲۴ ســاعته در ۷ روز هـفته </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span>	ضمانت کیفیت </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span>	خدمات پس از فروش </li>
+                      <li class="mb-2"><span class="me-2"><i class="fas fa-circle text-primary" style="font-size:.5rem"></i></span> بازگشت در صورت عدم رضایت </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-</body>
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="pt-7 pb-0">
 
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-lg mb-5">
+                <div class="text-center"><img src="assets/img/icons/awards.png" alt="..." />
+                  <h1 class="text-primary mt-4">3+</h1>
+                  <h5 class="text-800"> جوایز برنده شده </h5>
+                </div>
+              </div>
+              <div class="col-6 col-lg mb-5">
+                <div class="text-center"><img src="assets/img/icons/states.png" alt="..." />
+                  <h1 class="text-primary mt-4">30+</h1>
+                  <h5 class="text-800"> استان های تحت پوشش </h5>
+                </div>
+              </div>
+              <div class="col-6 col-lg mb-5">
+                <div class="text-center"><img src="assets/img/icons/clients.png" alt="..." />
+                  <h1 class="text-primary mt-4">15+</h1>
+                  <h5 class="text-800"> مشتریان </h5>
+                </div>
+              </div>
+              <div class="col-6 col-lg mb-5">
+                <div class="text-center"><img src="assets/img/icons/goods.png" alt="..." />
+                  <h1 class="text-primary mt-4">100+</h1>
+                  <h5 class="text-800"> محصولات تحویل داده شده </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="card bg-dark text-white py-4 py-sm-0"><img class="w-100" src="assets/img/gallery/video.png" alt="video" />
+                  <div class="card-img-overlay bg-dark-gradient d-flex flex-column flex-center"><img src="assets/img/icons/play.png" width="80" alt="play" />
+                    <h5 class="text-primary"> مشاهده نمونه کار دستگاه </h5>
+                    <p class="text-center"> تنها تامپوی دیجیتالی تمام اتوماتیک در ایران <br> با قابلیت چاپ یکدست بروی انواع اجسام نرم و سخت <br> با هر نوع شکل هندسی می باشد </p><a class="stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content overflow-hidden">
+                          <div class="modal-header p-0">
+                            <div class="ratio ratio-16x9" id="exampleModalLabel">
+                              <iframe src="https://www.youtube.com/embed/TlcP2aTOp-Q" title="YouTube video" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-7">
+
+          <div class="container-fluid">
+            <div class="row flex-center">
+              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/quote.png);background-position:top;background-size:auto;margin-left:-270px;margin-top:-45px;">
+              </div>
+              <!--/.bg-holder-->
+
+              <div class="col-md-8 col-lg-5 text-center">
+                <h5 class="text-danger"> Blog </h5>
+                <h2> آخرین پست ها </h2>
+              </div>
+            </div>
+            <div class="carousel slide pt-6" id="carouselExampleDark" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                <h3>hhhh</h3>
+
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section>
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-5 col-xl-4"><img src="assets/img/illustrations/callback.png" alt="..." />
+                <h5 class="text-danger" dir="rtl"> درخواست تماس </h5>
+                <h2 dir="rtl"> ما در کوتاه ترین زمان با شما تماس خواهیم گرفت. </h2>
+                <p class="text-muted" dir="rtl"> پشتیبانی ۲۴ ســاعته در ۷ روز هـفته </p>
+              </div>
+              <div class="col-md-6 col-lg-5 col-xl-4">
+                <form class="row" dir="rtl">
+                  <div class="mb-3">
+                    <label class="form-label visually-hidden" for="inputName">نام</label>
+                    <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="نام" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label visually-hidden" for="inputEmail">ایمیل</label>
+                    <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="ایمیل" />
+                  </div>
+                  <div class="mb-5">
+                    <label class="form-label visually-hidden" for="validationTextarea">متن پیام</label>
+                    <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="متن پیام" style="height: 150px" required="required"></textarea>
+                  </div>
+                  <div class="d-grid">
+                    <button class="btn btn-primary" type="submit"> ارسال پیام <i class="fas fa-paper-plane ms-2"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section id="findUs">
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-5 mb-6 text-center">
+                <h5 class="text-danger">FIND US</h5>
+                <h2> به راحتی با ما در ارتباط باشید </h2>
+              </div>
+              <div class="col-12">
+                <div class="card card-span rounded-2 mb-3">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="assets/img/gallery/map.png" alt="map" /></div>
+                    <div class="col-md-6 col-lg-5 d-flex flex-center">
+                      <div class="card-body">
+                        <h5> با ما تماس بگیرید </h5>
+                        <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span> تهران ، بلوار پاسدار گمنام ، بین خیابان نبرد و قیام ، پلاک۴۱ </span></p>
+                        <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700"> ۰۲۱-۳۳۱۸۴۸۶۱ </span></p>
+                        <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700"> ۰۹۰۳۱۸۷۵۰۷۳ - ۰۹۳۵۸۳۸۶۶۸۳ </span></p>
+                        <p><i class="fas fa-envelope text-warning me-3"> </i><a class="text-700" href="mailto:vctung@outlook.com"> contact@atrotech.com</a></p>
+                        <ul class="list-unstyled list-inline mt-5">
+                          <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram-square fs-4"></i></a></li>
+                          <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-whatsapp-square fs-4"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-primary px-5" type="submit"><i class="fas fa-phone-alt me-2"></i><a class="text-light" href="tel:09031875073"> همین حالا برای خرید با ما تماس بگیرید </a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="bg-1000">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6" dir="rtl" align="center">
+                <h2 class="fw-bold text-white"> در هفته نامه ما مشترک شوید </h2>
+                <p class="text-300"> با مشترک شدن در خبرنامه ما از آخرین فعالیت ها و مناسبت های ما با خبر باشید... </p>
+              </div>
+              <div class="col-lg-6">
+                <h5 class="text-primary mb-3"> مشترک شدن در خبرنامه </h5>
+                <form class="row gx-2 gy-2 align-items-center">
+                  <div class="col">
+                    <div class="input-group-icon">
+                      <label class="visually-hidden" for="inputEmailCta">E-mail</label>
+                      <input class="form-control input-box form-quriar-control text-light" id="inputEmailCta" type="email" placeholder="ایمیل خود را وارد کنید" />
+                    </div>
+                  </div>
+                  <div class="d-grid gap-3 col-sm-auto">
+                    <button class="btn btn-danger" type="submit"> مشترک شدن </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="bg-900 pb-0 pt-5">
+
+          <div class="container">
+            <div class="row" align="center" dir="rtl">
+              <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/logo.png" height="51" alt="" /></a>
+                <p class="text-500 my-4"> آتروتک با برخوردارى از نيروى انسانى متخصص و پشتوانه علمى و تجربى، با استفاده از آخرين روش هاى فن آورى و مهندسى موفق به ارائه خدمات گسترده و با كيفيت براى مشتريان گرديده </p>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
+                <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> دفترچه راهنما </h5>
+                <a href="#"> <img src="assets/img/gallery/footerimg.png" height="90" alt=""> </a>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
+                <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> پیوندها </h5>
+                <ul class="list-unstyled mb-md-4 mb-lg-0">
+                  <li class="lh-lg"><a class="text-500" href="#!"> وبلاگ </a></li>
+                  <li class="lh-lg"><a class="text-500" href="#!"> آپارات </a></li>
+                  <li class="lh-lg"><a class="text-500" href="#!"> آتروتک </a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
+                <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> خدمات مشتریان </h5>
+                <ul class="list-unstyled mb-md-4 mb-lg-0">
+                  <li class="lh-lg"><a class="text-500" href="#!"> درباره ما </a></li>
+                  <li class="lh-lg"><a class="text-500" href="#!"> تماس با ما </a></li>
+                  <li class="lh-lg"><a class="text-500" href="#!"> دریافت بروزرسانی </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0 bg-1000">
+
+          <div class="container">
+            <div class="row justify-content-md-between justify-content-evenly py-4">
+              <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+                <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Atrotech, 2021</p>
+              </div>
+              <div class="col-12 col-sm-8 col-md-6">
+                <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;
+                  <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
+                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
+                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-primary" href="https://Atrotech.ir" target="_blank">Atrotech </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+      </main>
+      <!-- ===============================================-->
+      <!--    End of Main Content-->
+      <!-- ===============================================-->
+
+
+
+
+      <!-- ===============================================-->
+      <!--    JavaScripts-->
+      <!-- ===============================================-->
+      <script src="vendors/@popperjs/popper.min.js"></script>
+      <script src="vendors/bootstrap/bootstrap.min.js"></script>
+      <script src="vendors/is/is.min.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+      <script src="vendors/fontawesome/all.min.js"></script>
+      <script src="assets/js/theme.js"></script>
+
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    </body>
 
 </html>
