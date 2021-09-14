@@ -58,5 +58,21 @@ def tampo(request):
 
 
 
+def product(request):
+    product = 'productproductproduct'
+    return render(request, 'product.html', {'product': product})
+
+
+
+
+def about(request):
+    about = 'aboutaboutaboutaboutabout'
+    return render(request, 'about.html', {'about': about})
+
+
+
+
+
+
 
 # End

@@ -37,8 +37,8 @@
         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
           <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{% url 'tampo' %}"> خانه </a></li>
           <li class="nav-item px-2"><a class="nav-link" href="{% url 'tampo' %}#services"> خدمات ما </a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="#findUs"> تماس با ما </a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="#"> در مورد ما </a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="{% url 'tampo' %}#findUs"> تماس با ما </a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="{% url 'about' %}"> در مورد ما </a></li>
           <li class="nav-item px-2"><a class="nav-link" href="{% url 'home' %}"> وبلاگ </a></li>
         </ul>
         <div class="dropdown d-none d-lg-block">
@@ -48,7 +48,7 @@
               <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
             </form>
           </div>
-        </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> صفحه محصول </a>
+        </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="{% url 'product' %}"> صفحه محصول </a>
         <form class="d-flex my-3 d-block d-lg-none">
           <input class="form-control me-2 border-200 bg-light" type="search" placeholder="جستجو" aria-label="Search" />
           <button class="btn btn-outline-primary" type="submit">جستجو</button>
