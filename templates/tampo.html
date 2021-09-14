@@ -14,18 +14,18 @@
       <!-- ===============================================-->
       <!--    Favicons-->
       <!-- ===============================================-->
-      <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-      <link rel="manifest" href="assets/img/favicons/manifest.json">
-      <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'tampo/assets/img/favicons/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'tampo/assets/img/favicons/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'tampo/assets/img/favicons/favicon-16x16.png' %}">
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'tampo/assets/img/favicons/favicon.ico' %}">
+      <link rel="manifest" href="{% static 'tampo/assets/img/favicons/manifest.json' %}">
+      <meta name="msapplication-TileImage" content="{% static 'tampo/assets/img/favicons/mstile-150x150.png' %}">
       <meta name="theme-color" content="#ffffff">
 
       <!-- ===============================================-->
       <!--    Stylesheets-->
       <!-- ===============================================-->
-      <link href="assets/css/theme.css" rel="stylesheet" />
+      <link href="{% static 'tampo/assets/css/theme.css' %}" rel="stylesheet" />
 
     </head>
 
@@ -37,7 +37,7 @@
       <!-- ===============================================-->
       <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-          <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" height="45" alt="logo" /></a>
+          <div class="container"><a class="navbar-brand" href="index.html"><img src="{% static 'tampo/assets/img/gallery/logo.png' %}" height="45" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
             <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
@@ -55,26 +55,26 @@
                 </div>
               </div><a class="btn btn-primary order-1 order-lg-0 ms-lg-3" href="#!"> بررسی تخصصی  </a>
               <form class="d-flex my-3 d-block d-lg-none">
-                <input class="form-control me-2 border-200 bg-light" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <input class="form-control me-2 border-200 bg-light" type="search" placeholder="جستجو" aria-label="Search" />
+                <button class="btn btn-outline-primary" type="submit">جستجو</button>
               </form>
             </div>
           </div>
         </nav>
         <section class="py-xxl-10 pb-0" id="home">
-          <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+          <div class="bg-holder bg-size" style="background-image:url({% static 'tampo/assets/img/gallery/hero-header-bg.png' %});background-position:top center;background-size:cover;">
           </div>
           <!--/.bg-holder-->
 
           <div class="container" dir="rtl">
             <div class="row align-items-center">
-              <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/illustrations/hero.png" alt="hero-header" /></div>
+              <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="{% static 'tampo/assets/img/illustrations/hero.png' %}" alt="hero-header" /></div>
               <div class="col-md-75 col-xl-6 col-xxl-5 py-8">
                 <br>
                 <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2"> دستگاه چاپ پد پرینتر (تامپو) </h1>
                 <p class="fs-1 mb-5"> دستگاه چاپ پد (تامپو) یک رنگ رومیزی که بدون نیاز به کمپرسور  <br> و با استفاده از برق می تواند چاپ های تامپو با کیفیت مطلوب را انجام دهد. </p>
                 <a class="btn btn-primary me-2" href="#!" role="button" dir="ltr"> اطلاعات بیشتر <i class="fas fa-arrow-right ms-2"></i></a>
-                <br> <a href="{% url 'home' %}"> blog </a> -->
+                <br> <a href="{% url 'home' %}"> <h6>blog</h6> </a>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
               <div class="col-md-4 pt-4 px-md-2 px-lg-3">
                 <div class="card h-100 px-lg-5 card-span">
                   <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
-                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/competition.png" alt="..." />
+                    <div class="text-center pt-5"><img class="img-fluid" src="{% static 'tampo/assets/img/icons/competition.png' %}" alt="..." />
                       <h5 class="my-4"> مزایای رقابتی </h5>
                     </div>
                     <p> تمایز و برتری ما نسبت به سایر دستگاه های مشابه در تمام الکترونیک بودن ، سرعت بالا و قابل تنظیم ، صدای بسیار کم، مصرف بهینه و همچنین رابط کاربری آسان آن است که همه این ها در کنار قیمت بسیار پایین محقق شده  </p>
@@ -112,7 +112,7 @@
               <div class="col-md-4 pt-4 px-md-2 px-lg-3">
                 <div class="card h-100 px-lg-5 card-span">
                   <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
-                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/medal.png" alt="..." />
+                    <div class="text-center pt-5"><img class="img-fluid" src="{% static 'tampo/assets/img/icons/medal.png' %}" alt="..." />
                       <h5 class="my-4"> کیفیت بالا </h5>
                     </div>
                     <p> این دستگاه جزو دستگاه های کم مصرف و با بازدهی بالا و با هزینه نگهداری بسیار پایین محسوب میشود و با دارا بودن رابط کاربری بسیار ساده و کاربردی و ساخت با کیفیت ، کار را برای اپراتور بسیار راحت میکند و در نهايت باعث افزایش بهره وری میشود. </p>
@@ -127,7 +127,7 @@
               <div class="col-md-4 pt-4 px-md-2 px-lg-3">
                 <div class="card h-100 px-lg-5 card-span">
                   <div class="card-body d-flex flex-column justify-content-around" dir="rtl">
-                    <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/service.png" alt="..." />
+                    <div class="text-center pt-5"><img class="img-fluid" src="{% static 'tampo/assets/img/icons/service.png' %}" alt="..." />
                       <h5 class="my-4"> پشتیبانی مناسب </h5>
                     </div>
                     <p>  هدف ما جلب رضایت شماست، رضایت مشتری یعنی باوری که مشتری به قابل اعتماد بودن ما دارد، بنابراین ما تلاش میکنیم تا چیزی که در قبال آن مسئولیت داریم را با ارزشی که دارد حفظ کنیم. </p>
@@ -158,25 +158,25 @@
           <div class="container">
             <div class="row">
               <div class="col-6 col-lg mb-5">
-                <div class="text-center"><img src="assets/img/icons/awards.png" alt="..." />
+                <div class="text-center"><img src="{% static 'tampo/assets/img/icons/awards.png' %}" alt="..." />
                   <h1 class="text-primary mt-4">3+</h1>
                   <h5 class="text-800"> جوایز برنده شده </h5>
                 </div>
               </div>
               <div class="col-6 col-lg mb-5">
-                <div class="text-center"><img src="assets/img/icons/states.png" alt="..." />
+                <div class="text-center"><img src="{% static 'tampo/assets/img/icons/states.png' %}" alt="..." />
                   <h1 class="text-primary mt-4">30+</h1>
                   <h5 class="text-800"> استان های تحت پوشش </h5>
                 </div>
               </div>
               <div class="col-6 col-lg mb-5">
-                <div class="text-center"><img src="assets/img/icons/clients.png" alt="..." />
+                <div class="text-center"><img src="{% static 'tampo/assets/img/icons/clients.png' %}" alt="..." />
                   <h1 class="text-primary mt-4">15+</h1>
                   <h5 class="text-800"> مشتریان </h5>
                 </div>
               </div>
               <div class="col-6 col-lg mb-5">
-                <div class="text-center"><img src="assets/img/icons/goods.png" alt="..." />
+                <div class="text-center"><img src="{% static 'tampo/assets/img/icons/goods.png' %}" alt="..." />
                   <h1 class="text-primary mt-4">100+</h1>
                   <h5 class="text-800"> محصولات تحویل داده شده </h5>
                 </div>
@@ -199,8 +199,8 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <div class="card bg-dark text-white py-4 py-sm-0"><img class="w-100" src="assets/img/gallery/video.png" alt="video" />
-                  <div class="card-img-overlay bg-dark-gradient d-flex flex-column flex-center"><img src="assets/img/icons/play.png" width="80" alt="play" />
+                <div class="card bg-dark text-white py-4 py-sm-0"><img class="w-100" src="{% static 'tampo/assets/img/gallery/video.png' %}" alt="video" />
+                  <div class="card-img-overlay bg-dark-gradient d-flex flex-column flex-center"><img src="{% static 'tampo/assets/img/icons/play.png' %}" width="80" alt="play" />
                     <h5 class="text-primary"> مشاهده نمونه کار دستگاه </h5>
                     <p class="text-center"> تنها تامپوی دیجیتالی تمام اتوماتیک در ایران <br> با قابلیت چاپ یکدست بروی انواع اجسام نرم و سخت <br> با هر نوع شکل هندسی می باشد </p><a class="stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -269,7 +269,7 @@
 
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-md-6 col-lg-5 col-xl-4"><img src="assets/img/illustrations/callback.png" alt="..." />
+              <div class="col-md-6 col-lg-5 col-xl-4"><img src="{% static 'tampo/assets/img/illustrations/callback.png' %}" alt="..." />
                 <h5 class="text-danger" dir="rtl"> درخواست تماس </h5>
                 <h2 dir="rtl"> ما در کوتاه ترین زمان با شما تماس خواهیم گرفت. </h2>
                 <p class="text-muted" dir="rtl"> پشتیبانی ۲۴ ســاعته در ۷ روز هـفته </p>
@@ -317,7 +317,7 @@
               <div class="col-12">
                 <div class="card card-span rounded-2 mb-3">
                   <div class="row">
-                    <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="assets/img/gallery/map.png" alt="map" /></div>
+                    <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="{% static 'tampo/assets/img/gallery/map.png' %}" alt="map" /></div>
                     <div class="col-md-6 col-lg-5 d-flex flex-center">
                       <div class="card-body">
                         <h5> با ما تماس بگیرید </h5>
@@ -394,7 +394,7 @@
               </div>
               <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
                 <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> دفترچه راهنما </h5>
-                <a href="#"> <img src="assets/img/gallery/footerimg.png" height="90" alt=""> </a>
+                <a href="#"> <img src="{% static 'tampo/assets/img/gallery/footerimg.png' %}" height="90" alt=""> </a>
               </div>
               <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
                 <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif"> پیوندها </h5>
@@ -459,12 +459,12 @@
       <!-- ===============================================-->
       <!--    JavaScripts-->
       <!-- ===============================================-->
-      <script src="vendors/@popperjs/popper.min.js"></script>
-      <script src="vendors/bootstrap/bootstrap.min.js"></script>
-      <script src="vendors/is/is.min.js"></script>
+      <script src="{% static 'tampo/vendors/@popperjs/popper.min.js' %}"></script>
+      <script src="{% static 'tampo/vendors/bootstrap/bootstrap.min.js' %}"></script>
+      <script src="{% static 'tampo/vendors/is/is.min.js' %}"></script>
       <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-      <script src="vendors/fontawesome/all.min.js"></script>
-      <script src="assets/js/theme.js"></script>
+      <script src="{% static 'tampo/vendors/fontawesome/all.min.js' %}"></script>
+      <script src="{% static 'tampo/assets/js/theme.js' %}"></script>
 
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     </body>
