@@ -1,7 +1,9 @@
 from django.views import generic
+from . import models
 from .models import Post
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
+
 
 
 class PostList(generic.ListView):
@@ -50,8 +52,8 @@ def post_detail(request, slug):
 
 
 def tampo(request):
-    a = 'a'
-    return render(request, 'tampo.html', {'a': a})
+    posts = models.Post.objects.filter(status=True).order_by("-created_on")[:3]
+    return render(request, 'tampo.html', {'posts': posts})
 
 
 
