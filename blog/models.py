@@ -63,6 +63,9 @@ class Newsletter(models.Model):
       verbose_name = "خبرنامه"
       verbose_name_plural = "خبرنامه ها"
 
+    def __str__(self):
+        return str(self.email)
+
 
 
 
@@ -77,6 +80,9 @@ class Contact(models.Model):
     class Meta:
       verbose_name = "تماس"
       verbose_name_plural = "تماس ها"
+
+    def __str__(self):
+        return str(self.name)
 
 
 
