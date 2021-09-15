@@ -19,6 +19,10 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
+    class Meta:
+      verbose_name = "پست"
+      verbose_name_plural = "پست ها"
+
     def __str__(self):
         return self.title
 
@@ -44,6 +48,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return "Comment {} by {}".format(self.body, self.name)
+
+    class Meta:
+      verbose_name = "نظر"
+      verbose_name_plural = "نظر ها"
 
 
 
