@@ -77,7 +77,8 @@ def tampo(request):
 
 def product(request):
     product = 'productproductproduct'
-    return render(request, 'product.html', {'product': product})
+    posts = models.Post.objects.filter(status=True).order_by("-created_on")[:3]
+    return render(request, 'product.html', {'product': product, 'posts':posts})
 
 
 
