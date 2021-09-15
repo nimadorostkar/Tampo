@@ -32,7 +32,7 @@ admin.site.register(Post, PostAdmin)
 
 class NewsletterAdmin(admin.ModelAdmin):
     list_display = ('email', 'email')
-    search_fields = ('email')
+    search_fields = ('email', 'email')
 
 admin.site.register(Newsletter, NewsletterAdmin)
 
