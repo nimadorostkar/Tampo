@@ -235,18 +235,19 @@
         <p class="text-muted" dir="rtl"> پشتیبانی ۲۴ ســاعته در ۷ روز هـفته </p>
       </div>
       <div class="col-md-6 col-lg-5 col-xl-4">
-        <form class="row" dir="rtl">
+        <form method="post" class="row" dir="rtl">
+          {% csrf_token %}
           <div class="mb-3">
             <label class="form-label visually-hidden" for="inputName">نام</label>
-            <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="نام" />
+            <input name="name" class="form-control form-quriar-control" id="inputName" type="text" placeholder="نام" />
           </div>
           <div class="mb-3">
             <label class="form-label visually-hidden" for="inputEmail">ایمیل</label>
-            <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="ایمیل" />
+            <input name="email" class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="ایمیل" />
           </div>
           <div class="mb-5">
             <label class="form-label visually-hidden" for="validationTextarea">متن پیام</label>
-            <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="متن پیام" style="height: 150px" required="required"></textarea>
+            <textarea name="body" class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="متن پیام" style="height: 150px" required="required"></textarea>
           </div>
           <div class="d-grid">
             <button class="btn btn-primary" type="submit"> ارسال پیام <i class="fas fa-paper-plane ms-2"></i></button>
