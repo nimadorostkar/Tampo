@@ -1,7 +1,7 @@
 from django.views import generic
 from . import models
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, NewsletterForm
 from django.shortcuts import render, get_object_or_404
 
 
@@ -53,7 +53,19 @@ def post_detail(request, slug):
 
 def tampo(request):
     posts = models.Post.objects.filter(status=True).order_by("-created_on")[:3]
-    return render(request, 'tampo.html', {'posts': posts})
+
+
+
+
+    if request.method == "POST":
+        newsletter_form = NewsletterForm(data=request.POST)
+        if newsletter_form.is_valid():
+            obj = newsletter_form.save(commit=False)
+            obj.save()
+    else:
+        newsletter_form = NewsletterForm()
+
+    return render(request, 'tampo.html', {'posts': posts, 'newsletter_form':newsletter_form})
 
 
 

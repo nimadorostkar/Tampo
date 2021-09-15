@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 {% load humanize %}
 
@@ -311,28 +312,30 @@
 <!-- <section> begin ============================-->
 <section class="bg-1000">
 
-  <div class="container">
+  <div class="container" dir="rtl" align="center">
     <div class="row">
-      <div class="col-lg-6" dir="rtl" align="center">
+      <div class="col-lg-6">
         <h2 class="fw-bold text-white"> در هفته نامه ما مشترک شوید </h2>
         <p class="text-300"> با مشترک شدن در خبرنامه ما از آخرین فعالیت ها و مناسبت های ما با خبر باشید... </p>
       </div>
       <div class="col-lg-6">
-        <h5 class="text-primary mb-3"> مشترک شدن در خبرنامه </h5>
-        <form class="row gx-2 gy-2 align-items-center">
+        <p class="text-primary mb-3"> مشترک شدن در خبرنامه </p>
+
           <div class="col">
             <div class="input-group-icon">
-              <label class="visually-hidden" for="inputEmailCta">E-mail</label>
-              <input class="form-control input-box form-quriar-control text-light" id="inputEmailCta" type="email" placeholder="ایمیل خود را وارد کنید" />
+              <form method="post">
+                {{ newsletter_form | crispy }}
+                {% csrf_token %}
+                <br>
+                <button type="submit" class="btn btn-primary  btn-lg"> مشترک شدن </button>
+              </form>
             </div>
           </div>
-          <div class="d-grid gap-3 col-sm-auto">
-            <button class="btn btn-danger" type="submit"> مشترک شدن </button>
-          </div>
-        </form>
+
       </div>
     </div>
   </div>
+
   <!-- end of .container-->
 
 </section>
