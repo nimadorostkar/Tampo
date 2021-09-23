@@ -1,4 +1,4 @@
-# Django_blog
+# دستگاه چاپ تامپو رومیزی
 
 A blog application made on Django.
 
